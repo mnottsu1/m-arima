@@ -17,8 +17,9 @@ const sassBuild = (done) => {
 
 // タスク「watchScss」を関数で定義
 // _src/sass/の下の全てのフォルダの拡張子「.scss」のファイルを監視して、変化があればsassBuidlを行う
-const watchScss = () => {
+const watchScss = (done) => {
   watch('./_src/sass/**/*.scss', sassBuild);
+  done();
 };
 
 // series関数で、デフォルトタスクに「sassBuild」と「watchScss」を設定し、順番に実行する
