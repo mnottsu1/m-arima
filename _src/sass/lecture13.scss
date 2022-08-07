@@ -1,0 +1,47 @@
+.btn {
+    display: block;
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+
+    &.red {
+        background: #f00;
+    }
+
+    &.green {
+        background: #0f0;
+    }
+}
+
+aside {
+    width: 240px;
+
+    .menu {
+        margin-bottom: 20px
+    }
+
+    body#top & {
+        width: 300px;
+    }
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// BEM設計
+.block {
+    width: 500px;
+
+    & &__element {
+        margin-bottom: 20px;
+
+        &--modifier {
+            background: #f000;
+        }
+    }
+}

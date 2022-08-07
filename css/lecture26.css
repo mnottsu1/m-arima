@@ -1,0 +1,20 @@
+#main .mainBox {
+  padding: 10px;
+  margin-bottom: 20px;
+  color: #333;
+}
+#main .sideBox {
+  padding: 40px;
+  margin-bottom: 80px;
+  color: #0f0;
+}
+#main .normalBox {
+  padding: 20px;
+  margin-bottom: 40px;
+  color: #0f0;
+}
+#main .normal2Box {
+  padding: 20px;
+  margin-bottom: 40px;
+  color: #00f;
+}

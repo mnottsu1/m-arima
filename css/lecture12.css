@@ -1,0 +1,9 @@
+ul li + li {
+  border-bottom: 1px solid #666;
+}
+ul li ~ li {
+  color: "f000";
+}
+ul li > li {
+  background: #fff;
+}

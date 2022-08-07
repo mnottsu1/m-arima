@@ -1,0 +1,23 @@
+@mixin media($width-media: 768px) {
+    @media only screen and (max-width: $width-media) {
+        @content;
+    }
+}
+
+$sp-width: 800px;
+
+.item {
+    .image {
+        float: left;
+        @include media($sp-width) {
+            float: none;
+        }
+    }
+}
+
+.text {
+    margin-left: 10px;
+    @include media {
+        margin-left: 0;
+    }
+}

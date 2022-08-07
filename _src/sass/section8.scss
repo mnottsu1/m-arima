@@ -1,0 +1,115 @@
+@mixin ht($value) {
+    height: $value;
+}
+
+.box {
+    width: round(100px / 3);
+    @include ht(100px / 3);
+}
+
+.quote {
+    content: quote(テスト);
+}
+
+.unquote {
+    content: unquote("テスト");
+}
+
+.abs {
+    width: abs(100px - 200px);
+}
+
+.ceil {
+    width: ceil(100px / 3);
+}
+
+.floor {
+    width: floor(100px / 3);
+}
+
+.round {
+    width: round(100px / 3);
+}
+
+.rgba {
+    color: rgba($color: #fff, $alpha: 1.0);
+}
+
+.mix {
+    color: mix(#f70000, #0000e2);
+}
+
+.lighten {
+    color: lighten(#279841, 30%);
+}
+
+.darken {
+    color: darken(#279841, 30%);
+}
+
+$list1: pen, apple, pineapple;
+$list2: apple, pen;
+
+.length {
+    z-index: length($list1);
+}
+
+.nth {
+    content: nth($list1, 2)
+}
+
+.join {
+    content: join($list1,$list2);
+}
+
+.append {
+    content: append($list1, banana);
+}
+
+$map: (
+    bgcolor: #ededed,
+    fontcolor: #ff0000,
+    bdcolor: #000000
+);
+
+.mapget {
+    color: map-get($map, fontcolor);
+}
+
+@function sum($value1: 50px, $value2: 50px) {
+    $result: 0;
+    @if type-of($value1) == number {
+        $result:  $value1 + $value2;
+    } @else {
+        @error "#{value1}は数値ではりません"
+    }
+    @return $result;
+}
+
+.sum {
+    width: sum("100px", 200px);
+}
+
+.sum {
+    width: sum();
+}
+
+@function average($arr) {
+    $sum: 0;
+    @each $value in $arr {
+        $sum: $sum + $value;
+        @debug $sum;
+    }
+    @return round($sum / length($arr));
+}
+
+$list: 1, 7, 9, 23, 11;
+
+.ave {
+    margin: average($list);
+    test: function-exists(func);
+    test: function-exists(length);
+}
+
+
+

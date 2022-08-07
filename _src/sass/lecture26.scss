@@ -1,0 +1,23 @@
+@mixin paddingBox($value: 20px, $color: #0f0) {
+    padding: $value;
+    margin-bottom: $value * 2;
+    color: $color;
+}
+
+#main {
+    .mainBox {
+        @include paddingBox(10px, #333);
+    }
+
+    .sideBox {
+        @include paddingBox(40px);
+    }
+
+    .normalBox {
+        @include paddingBox;
+    }
+
+    .normal2Box {
+        @include paddingBox($color: #00f);
+    }
+}

@@ -1,7 +1,7 @@
-ul {
-  margin: 20px;
-  list-style: none;
+.style1 {
+  margin: 10px;
 }
-ul li {
-  padding: 10px;
+
+.styles2 {
+  padding: 20px;
 }

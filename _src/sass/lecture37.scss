@@ -1,0 +1,26 @@
+@for $i from 1 through 3 {
+    $index: $i * 10;
+    .mt#{$index} {
+        margin-top: $i * 10;
+    }
+}
+@for $i from 1 to 3 {
+    .mt#{$i} {
+        margin-top: $i * 10;
+    }
+}
+
+$i: 0;
+@while ($i < 30) {
+    .pb#{$i} {
+        padding-bottom: $i * 10;
+    }
+    $i: $i + 10;
+}
+
+$icons: top, qa, contact;
+@each $value in $icons {
+    .icon-#{$value} {
+        background: url("../img/" + $value + ".png");
+    }
+}

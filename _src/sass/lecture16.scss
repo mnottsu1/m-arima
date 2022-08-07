@@ -1,0 +1,23 @@
+.block {
+    .element1 {
+        width: 800px;
+    }
+
+    @at-root {
+        .element2 {
+            width: 1000px;
+        }
+        .element3 {
+            width: 1100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+
+        // @at-rootを使用してもメディアクエリ内の出力となる
+        @at-root .item {
+            margin-bottom: 30px;
+        }
+    }
+}

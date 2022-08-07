@@ -1,0 +1,24 @@
+// 可変長引数
+// 個数を限定しないで複数の引数を複数渡すことが可能
+// text-shadowやbox-shadowなど、複数の値をもつプロパティに対して使用する
+
+@mixin shadow($value...) {
+    text-shadow: $value;
+}
+
+.main {
+    @include shadow(8px 8px 0 #666, 10px -10px 0 #999);
+}
+
+@mixin box($w: 300px, $pd: 20px, $mg: 40px, $clr: #f00) {
+    width: $w;
+    padding: $pd;
+    margin: $mg;
+    color: $clr;
+}
+
+$value: 200px, 40px;
+
+.side {
+    @include box($value...);
+}

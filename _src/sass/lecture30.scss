@@ -1,0 +1,9 @@
+%box {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.area {
+    @extend %box;
+    background: #fff;
+}

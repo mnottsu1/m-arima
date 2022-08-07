@@ -1,0 +1,79 @@
+@charset "UTF-8";
+.box {
+  width: 33px;
+  height: 33.3333333333px;
+}
+
+.quote {
+  content: "テスト";
+}
+
+.unquote {
+  content: テスト;
+}
+
+.abs {
+  width: 100px;
+}
+
+.ceil {
+  width: 34px;
+}
+
+.floor {
+  width: 33px;
+}
+
+.round {
+  width: 33px;
+}
+
+.rgba {
+  color: white;
+}
+
+.mix {
+  color: #7c0071;
+}
+
+.lighten {
+  color: #7bdd91;
+}
+
+.darken {
+  color: #081e0d;
+}
+
+.length {
+  z-index: 3;
+}
+
+.nth {
+  content: apple;
+}
+
+.join {
+  content: pen, apple, pineapple, apple, pen;
+}
+
+.append {
+  content: pen, apple, pineapple, banana;
+}
+
+.mapget {
+  color: #ff0000;
+}
+
+.sum {
+  width: 0;
+}
+
+.sum {
+  width: 100px;
+}
+
+.ave {
+  margin: 10;
+  test: false;
+  test: true;
+}
